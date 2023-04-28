@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Two Buttons</title>
+    <style>
+        /* Add some styling to make it look beautiful */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #050a05;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Which method you want to Test.?</h2>
+        <form action="/test/email">
+            <div>
+                <input type="submit" value="Email">
+            </div>
+        </form>
+        <form action="/test/dbcon">
+            <div>
+                <input type="submit" value="Database">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

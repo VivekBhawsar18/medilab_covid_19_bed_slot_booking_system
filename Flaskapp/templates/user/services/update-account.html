@@ -1,0 +1,66 @@
+{% extends 'user/base.html' %}
+
+{% block title %}update details{% endblock title %}
+
+{% block body %}
+<div class="containerBooking">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container mt-3">
+        <form action="/user/account/update" method="post">
+            {% include 'alert/flash.html' %}
+            <table class="table  table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Email</th>
+                        <th class="table-light">{{current_user.EMAIL}}</th>
+
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th class="table-light"><input type="text" class="form-control" name="name"
+                                value="{{current_user.user_data.USER_NAME}}" placeholder="Name" required /></th>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <th class="table-light"><input type="text" class="form-control" name="gender" {% if
+                                current_user.user_data.GENDER!="None" %} value="{{ current_user.user_data.GENDER }}" {%
+                                endif %} placeholder="Gender" /></th>
+                    </tr>
+                    <tr>
+                        <th>Contact</th>
+                        <th class="table-light"><input type="text" class="form-control" name="contact" {% if
+                                current_user.user_data.CONTACT!="None" %} value="{{current_user.user_data.CONTACT}}" {%
+                                endif %} placeholder="Contact" /></th>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <th class="table-light"><input type="text" class="form-control" name="address" {% if
+                                current_user.user_data.ADDRESS!="None" %} value="{{current_user.user_data.ADDRESS }}" {%
+                                endif %} placeholder="Address" /></th>
+                    </tr>
+
+                    <tr>
+                        <th>Update</th>
+                        <th class="table-light">
+                            <button type="submit" class="btn btn-dark">Save</button>
+
+                        </th>
+                    </tr>
+
+                </thead>
+            </table>
+        </form>
+
+    </div>
+
+</div>
+{% endblock body %}

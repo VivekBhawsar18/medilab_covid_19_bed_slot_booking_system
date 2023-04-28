@@ -1,0 +1,35 @@
+{% extends 'authentication/base.html' %}
+{% block title %} Admin Login{% endblock title %}
+{% block logo %}
+<h1 class="logo me-auto"><a href="https://medilab.pythonanywhere.com">Medilab</a></h1>
+{% endblock logo %}
+
+{% block body %}
+<div class="containerI">
+    <br>
+    <section class="container1 forms">
+        <div class="form login">
+            <div class="form-content">
+                {% include "alert/flash.html" %}
+                <header>Admin Login</header>
+                <form action="/admin/login" method="post" id="logFrm">
+                    <div class="field input-field">
+                        <input type="text" placeholder="Email" class="input" name="email" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password" name="password" required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+</div>
+<script src="../../static/assets/js/v-main.js"></script>
+
+{% endblock body %}

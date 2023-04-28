@@ -1,0 +1,96 @@
+{% extends 'admin/base.html' %}
+{% block title %} Admin dashboard {% endblock title %}
+{% block body %}
+<!-- ======= Hero Section ======= -->
+<br>
+<br>
+<br>
+<section id="hero" class="d-flex align-items-center">
+    <div class="container">
+        <h1>Welcome Admin</h1>
+        <h2>INDIA COVID-19 BED SLOT BOOKING SYSTEM</h2>
+        <a href="#services" class="btn-get-started scrollto">Get Started</a>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Services</h2>
+                <p>Medilab offers a comprehensive range of medical services designed to meet all your healthcare
+                    needs. Our experienced
+                    and knowledgeable team of medical professionals is dedicated to providing the highest level of
+                    care to our patients.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                        <h4><a href="{{url_for('admin.add_new_hospital')}}">Add new hospital</a></h4>
+                        <p>Expand access to quality healthcare with Medilab by adding a new hospital to their network
+                            through the "Add New
+                            Hospital" section of the administrative panel.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                        <h4><a href="{{ url_for('admin.user_data') }}">Bookings</a></h4>
+                        <p>Keep track of patient appointments and manage the booking schedule with ease through the
+                            administrative view of the
+                            Bookings section on the Medilab website.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                        <h4><a href="{{ url_for('admin.hospital_data') }}">Hospitals</a></h4>
+                        <p>Discover the wide network of top-notch hospitals providing quality healthcare services under
+                            the Medilab umbrella in the
+                            Hospitals section of the website.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-dna"></i></div>
+                        <h4><a href="">Nemo Enim</a></h4>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-wheelchair"></i></div>
+                        <h4><a href="">Dele cardo</a></h4>
+                        <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                        <h4><a href="">Divera don</a></h4>
+                        <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                    </div>
+                </div> -->
+
+
+            </div>
+
+
+        </div>
+    </section><!-- End Services Section -->
+    {% endblock body %}

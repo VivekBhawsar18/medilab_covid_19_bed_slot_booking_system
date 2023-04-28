@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../../static/assets/img/favicon.png" rel="icon">
+    <link href="../../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../static/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../../static/assets/css/style.css" rel="stylesheet">
+    <link href="../../static/assets/css/v-style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@medilab.com</a>
+            </div>
+            <div class="d-none d-lg-flex social-links align-items-center">
+                <i class="bi bi-phone"></i> +1 5589 55488 55
+                <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo me-auto"><a href="/">Medilab</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="/" class="logo me-auto"><img src="../../static/assets/img/logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+
+                    <li class="dropdown"><a href="{{ url_for('home.index') }}"><span>Login</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ url_for('authentication.user_sign_in') }}">User Login</a></li>
+                            <li><a href="{{ url_for('authentication.hospital_login') }}">Hospital Login</a></li>
+                            <li><a href="{{ url_for( 'authentication.admin_login' ) }}">Admin Login</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <a href="{{ url_for('authentication.user_sign_in')}}" class="appointment-btn scrollto"><span
+                    class="d-none d-md-inline">Bed Booking
+                    Slot</span>
+                Book Now</a>
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <h1>Welcome to Covid Center</h1>
+            <h2>INDIA COVID-19 BED SLOT BOOKING SYSTEM</h2>
+            <a href="#" class="btn-get-started scrollto">Get Started</a>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-4 d-flex align-items-stretch">
+                        <div class="content">
+                            <h3>Why Choose Medilab?</h3>
+                            <p>
+                                Medilab is the premier choice for all your medical needs. Our commitment to providing
+                                top-quality care and services
+                                sets us apart from the rest. With a team of highly trained and experienced medical
+                                professionals, you can trust that
+                                you're in good hands.
+                                Medilab has got you covered. Experience the difference with Medilab - choose us for your
+                                health and well-being today.
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 d-flex align-items-stretch">
+                        <div class="icon-boxes d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-receipt"></i>
+                                        <h4>Treatment services</h4>
+                                        <p>We are equipped with state-of-the-art technology and modern facilities,
+                                            ensuring that our patients receive accurate and
+                                            efficient diagnostic and treatment services.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-cube-alt"></i>
+                                        <h4>Information and resources</h4>
+                                        <p>Medilab's content section provides valuable information and resources to our
+                                            patients, covering a wide range of topics
+                                            related to health and wellness, from disease management and treatment
+                                            options to healthy lifestyle choices.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-images"></i>
+                                        <h4>Photo gallery</h4>
+                                        <p>Medilab's photo gallery showcases our modern facilities and cutting-edge
+                                            technology, offering a glimpse into the
+                                            exceptional healthcare experience we provide to our patients.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End .content-->
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Why Us Section -->
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div
+                        class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+                        <a href="#" class="glightbox play-btn mb-4"></a>
+                    </div>
+
+                    <div
+                        class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                        <h3>Medilab makes booking appointments easy and convenient with our online booking system.</h3>
+                        <p>Medilab is a leading healthcare provider, dedicated to delivering the highest quality medical
+                            care to our patients. Our
+                            team of experienced and knowledgeable medical professionals is committed to providing
+                            personalized, patient-centered
+                            care in a warm and welcoming environment.</p>
+
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                            <h4 class="title"><a href="">Technology</a></h4>
+                            <p class="description">With state-of-the-art facilities and cutting-edge technology, Medilab
+                                offers a comprehensive range of medical services</p>
+                        </div>
+
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-gift"></i></div>
+                            <h4 class="title"><a href="">Care</a></h4>
+                            <p class="description">Our commitment to patient satisfaction is reflected in everything we
+                                do, from the quality of care we provide to the
+                                convenience of our booking system</p>
+                        </div>
+
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-atom"></i></div>
+                            <h4 class="title"><a href="">Plans</a></h4>
+                            <p class="description">At Medilab, we work closely with our patients to develop
+                                customized treatment plans that take into account their unique needs and health goals.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="fas fa-user-md"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Doctors</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                        <div class="count-box">
+                            <i class="far fa-hospital"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Departments</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="fas fa-flask"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Research Labs</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="fas fa-award"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p>Awards</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Counts Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Services</h2>
+                    <p>Medilab offers a comprehensive range of medical services designed to meet all your healthcare
+                        needs. Our experienced
+                        and knowledgeable team of medical professionals is dedicated to providing the highest level of
+                        care to our patients.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                            <h4><a href="">Chronic disease management</a></h4>
+                            <p>Our team of medical professionals is dedicated to providing comprehensive, personalized
+                                care for patients with chronic
+                                diseases.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-pills"></i></div>
+                            <h4><a href="">Vaccinations</a></h4>
+                            <p>Medilab offers a comprehensive range of vaccinations to protect against various diseases
+                                and ensure the overall health
+                                and wellness of our patients.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                            <h4><a href="">Bookings</a></h4>
+                            <p>Medilab makes booking appointments easy and convenient with our online booking system,
+                                allowing patients to schedule
+                                appointments at their convenience.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-dna"></i></div>
+                            <h4><a href="">Availability</a></h4>
+                            <p>Medilab is dedicated to providing accessible and convenient healthcare services, with
+                                flexible scheduling options and
+                                extended hours to accommodate our patients' needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-wheelchair"></i></div>
+                            <h4><a href="">Patients</a></h4>
+                            <p>At Medilab, our top priority is always the well-being of our patients, and we strive to
+                                provide exceptional,
+                                personalized care for every individual that walks through our doors.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                            <h4><a href="">New hospital</a></h4>
+                            <p>Medilab is a state-of-the-art healthcare facility, offering the latest in medical
+                                technology and resources, providing
+                                patients with the highest level of care and comfort.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+        <!-- ======= Appointment Section ======= -->
+        <!-- <section id="appointment" class="appointment section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Make an Appointment</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                        sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                        Quia fugiat sit
+                        in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                                data-rule="email" data-msg="Please enter a valid email">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone"
+                                data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 form-group mt-3">
+                            <input type="datetime" name="date" class="form-control datepicker" id="date"
+                                placeholder="Appointment Date" data-rule="minlen:4"
+                                data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3">
+                            <select name="department" id="department" class="form-select">
+                                <option value="">Select Department</option>
+                                <option value="Department 1">Department 1</option>
+                                <option value="Department 2">Department 2</option>
+                                <option value="Department 3">Department 3</option>
+                            </select>
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-md-4 form-group mt-3">
+                            <select name="doctor" id="doctor" class="form-select">
+                                <option value="">Select Doctor</option>
+                                <option value="Doctor 1">Doctor 1</option>
+                                <option value="Doctor 2">Doctor 2</option>
+                                <option value="Doctor 3">Doctor 3</option>
+                            </select>
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5"
+                            placeholder="Message (Optional)"></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Make an Appointment</button></div>
+                </form>
+
+            </div>
+        </section>End Appointment Section -->
+
+        <!-- ======= Departments Section ======= -->
+        <section id="departments" class="departments">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Departments</h2>
+                    <p>Medilab's department section offers an overview of the various medical services we provide,
+                        including diagnostic and
+                        therapeutic services, specialized care, and preventive health measures, all delivered by our
+                        experienced and
+                        knowledgeable medical professionals.</p>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-3">
+                        <ul class="nav nav-tabs flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="tab-1">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Cardiology</h3>
+                                        <p class="fst-italic">Medilab's cardiology department specializes in the
+                                            diagnosis, treatment, and management of heart and cardiovascular
+                                            diseases, offering the latest medical technology and treatments to ensure
+                                            the best possible outcomes for our patients.</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="../../static/assets/img/departments-1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Neurology</h3>
+                                        <p class="fst-italic">Medilab's neurology department provides expert care for
+                                            patients with neurological conditions, utilizing the latest
+                                            medical technology and treatments to improve outcomes and enhance the
+                                            quality of life for our patients.</p>
+
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="../../static/assets/img/departments-2.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Hepatology</h3>
+                                        <p class="fst-italic">Medilab's hepatology department specializes in the
+                                            diagnosis, treatment, and management of liver diseases, offering
+                                            comprehensive care and the latest medical technology to ensure the best
+                                            possible outcomes for our patients.</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="../../static/assets/img/departments-3.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Pediatrics</h3>
+                                        <p class="fst-italic">Medilab's pediatrics department offers comprehensive and
+                                            compassionate care for children of all ages, with a focus on
+                                            preventive health measures, early detection, and treatment for a wide range
+                                            of medical conditions</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="../../static/assets/img/departments-4.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-5">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Eye Care</h3>
+                                        <p class="fst-italic">Medilab's eye care department provides complete eye care
+                                            services, including diagnosis, treatment, and management of a
+                                            wide range of ocular conditions, utilizing the latest medical technology and
+                                            treatments to improve outcomes and enhance
+                                            the quality of life for our patients.</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="../../static/assets/img/departments-5.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Departments Section -->
+
+        <!-- ======= Doctors Section ======= -->
+        <section id="doctors" class="doctors">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Doctors</h2>
+                    <p>Medilab's doctors department consists of a team of highly skilled and experienced medical
+                        professionals, committed to
+                        providing the highest level of care to our patients. Our doctors are specialists in their
+                        respective fields, with a
+                        passion for delivering exceptional healthcare and the latest medical technology and treatments
+                        to improve outcomes and
+                        enhance the quality of life for our patients.</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="member d-flex align-items-start">
+                            <div class="pic"><img src="../../static/assets/img/doctors/doctors-1.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="member-info">
+                                <h4>Walter White</h4>
+                                <span>Chief Medical Officer</span>
+                                <p>Dr. Walter White, Chief Medical Officer at Medilab, is a highly experienced and
+                                    respected physician</p>
+                                <div class="social">
+                                    <!-- <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <div class="member d-flex align-items-start">
+                            <div class="pic"><img src="../../static/assets/img/doctors/doctors-2.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="member-info">
+                                <h4>Sarah Jhonson</h4>
+                                <span>Anesthesiologist</span>
+                                <p>Dr. Sarah Johnson, an anesthesiologist at Medilab , dedicated
+                                    to ensuring the comfort and safety of her patients during surgical procedures.</p>
+                                <div class="social">
+                                    <!-- <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start">
+                            <div class="pic"><img src="../../static/assets/img/doctors/doctors-3.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="member-info">
+                                <h4>William Anderson</h4>
+                                <span>Cardiology</span>
+                                <p>Dr. William Anderson, a cardiologist at Medilab,
+                                    dedicated to providing the highest level of care for patients with heart and
+                                    cardiovascular diseases.</p>
+                                <div class="social">
+                                    <!-- <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start">
+                            <div class="pic"><img src="../../static/assets/img/doctors/doctors-4.jpg" class="img-fluid"
+                                    alt=""></div>
+                            <div class="member-info">
+                                <h4>Amanda Jepson</h4>
+                                <span>Neurosurgeon</span>
+                                <p>Dr. Amanda Jepson, a neurosurgeon at Medilab, dedicated to
+                                    providing exceptional care for patients with neurological conditions</p>
+                                <div class="social">
+                                    <!-- <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Doctors Section -->
+
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <!-- <section id="faq" class="faq section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                        sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                        Quia fugiat sit
+                        in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="faq-list">
+                    <ul>
+                        <li data-aos="fade-up">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                                data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
+                                    class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                                <p>
+                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
+                                    non curabitur
+                                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim
+                                nunc? <i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+                                    velit laoreet id
+                                    donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
+                                    pellentesque elit
+                                    ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing
+                                elit? <i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
+                                    pulvinar elementum
+                                    integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
+                                    pellentesque eu tincidunt.
+                                    Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
+                                    sed odio morbi
+                                    quis
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam
+                                sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
+                                    est ante in. Nunc
+                                    vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
+                                    bibendum est. Purus
+                                    gravida quis blandit turpis cursus in.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="400">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare.
+                                Varius vel pharetra vel turpis nunc eget lorem
+                                dolor? <i class="bx bx-chevron-down icon-show"></i><i
+                                    class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo
+                                    integer malesuada
+                                    nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor
+                                    sed. Ut venenatis
+                                    tellus in metus vulputate eu scelerisque.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </section>End Frequently Asked Questions Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+
+                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="../../static/assets/img/testimonials/testimonials-1.jpg"
+                                        class="testimonial-img" alt="">
+                                    <h3>Saul Goodman</h3>
+                                    <h4>Ceo &amp; Founder</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        Saul Goodman, CEO and Founder of Medilab, is a visionary and passionate
+                                        healthcare leader, and his testimony in the
+                                        testimonials section of the Medilab website highlights his commitment to
+                                        delivering the best possible outcomes for every
+                                        patient.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="../../static/assets/img/testimonials/testimonials-2.jpg"
+                                        class="testimonial-img" alt="">
+                                    <h3>Sara Wilsson</h3>
+                                    <h4>Designer</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        Sara Wilsson, a designer at Medilab, is a highly skilled and creative
+                                        professional. Her testimonials in the testimonials section
+                                        of the Medilab website showcase her
+                                        expertise and dedication to her work.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="../../static/assets/img/testimonials/testimonials-3.jpg"
+                                        class="testimonial-img" alt="">
+                                    <h3>Jena Karlis</h3>
+                                    <h4>Store Owner</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        Jena Karlis, a store owner, is a highly satisfied customer of Medilab, who has
+                                        experienced first-hand. Her testimonial in the testimonials
+                                        section highlights
+                                        her positive experience with the company.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="../../static/assets/img/testimonials/testimonials-4.jpg"
+                                        class="testimonial-img" alt="">
+                                    <h3>Matt Brandon</h3>
+                                    <h4>Freelancer</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        Matt Brandon, a freelancer, endorses Medilab as a supportive and collaborative
+                                        partner in his testimonial in the
+                                        testimonials section of the website.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="../../static/assets/img/testimonials/testimonials-5.jpg"
+                                        class="testimonial-img" alt="">
+                                    <h3>John Larson</h3>
+                                    <h4>Entrepreneur</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        John Larson, an entrepreneur, praises Medilab for their top-notch medical
+                                        services and professional staff in his
+                                        testimonial in the testimonials section of the website.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- End Testimonials Section -->
+
+        <!-- ======= Gallery Section ======= -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Gallery</h2>
+                    <p>Discover the vibrant and welcoming atmosphere of Medilab through stunning visuals in the Gallery
+                        section of the website.</p>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row g-0">
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-1.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-2.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-3.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-4.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-5.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-6.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-7.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="../../static/assets/img/gallery/gallery-8.jpg" class="galelry-lightbox">
+                                <img src="../../static/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Gallery Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <!-- <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                        sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                        Quia fugiat sit
+                        in iste officiis commodi quidem hic quas.</p>
+                </div>
+            </div>
+
+            <div>
+                <iframe style="border:0; width: 100%; height: 350px;"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="container">
+                <div class="row mt-5">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Location:</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>info@example.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+1 5589 55488 55s</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                    required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Medilab</h3>
+                        <p>
+                            A108 Adam Street <br>
+                            New York, NY 535022<br>
+                            United States <br><br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Stay up-to-date on the latest news, promotions, and events from Medilab by subscribing to
+                            our Newsletter.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">Vivek Bhawsar</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../../static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../static/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../../static/assets/js/main.js"></script>
+
+</body>
+
+</html>

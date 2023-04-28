@@ -1,0 +1,72 @@
+{% extends 'user/base.html' %}
+
+{% block title %}update booking{% endblock title %}
+
+{% block body %}
+<div class="containerBooking">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container mt-3">
+        {% include 'alert/flash.html' %}
+        <form action="/user/bedslot-booking/update" method="post">
+            <table class="table  table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Email</th>
+                        <th class="table-light">{{current_user.EMAIL}}</th>
+
+                    </tr>
+                    <tr>
+                        <th>Hcode</th>
+                        <th class="table-light">{{data.HCODE}}</th>
+                    </tr>
+                    <tr>
+                        <th>Hospital</th>
+                        <th class="table-light">{{data.HOSPITAL_NAME}}</th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th class="table-light"><input type="text" class="form-control" name="name"
+                                value="{{data.PATIENT_NAME}}" placeholder="Update name" required /></th>
+
+                    </tr>
+                    <tr>
+                        <th>Contact</th>
+                        <th class="table-light"><input type="text" class="form-control" name="contact"
+                                value="{{data.PATIENT_CONTACT}}" placeholder="Update contact" required /></th>
+                    </tr>
+                    <tr>
+                        <th>Bedtype</th>
+                        <th class="table-light">{{data.BED_TYPE}}</th>
+
+                    </tr>
+
+                    <tr>
+                        <th>Oxygen</th>
+                        <th class="table-light"><input type="text" class="form-control" name="oxygen"
+                                value="{{data.OXYGEN_LEVEL}}" placeholder="Update Oxygen level" required /></th>
+                    </tr>
+
+                    <tr>
+                        <th>Update</th>
+                        <th class="table-light">
+                            <button type="submit" class="btn btn-dark">Save</button>
+
+                        </th>
+                    </tr>
+
+                </thead>
+            </table>
+        </form>
+
+    </div>
+
+</div>
+{% endblock body %}

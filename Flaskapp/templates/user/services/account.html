@@ -1,0 +1,59 @@
+{% extends 'user/base.html' %}
+
+{% block title %}Account{% endblock title %}
+
+{% block body %}
+<div class="containerBooking">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container mt-3">
+
+        <table class="table  table-hover">
+            {% include 'alert/flash.html' %}
+            <thead class="table-dark">
+                <tr>
+                    <th>Email</th>
+                    <th class="table-light">{{current_user.EMAIL}}</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th class="table-light">{{current_user.user_data.USER_NAME}}</th>
+                </tr>
+                <tr>
+                    <th>Contact</th>
+                    <th class="table-light">{{current_user.user_data.CONTACT}}</th>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <th class="table-light">{{current_user.user_data.GENDER}}</th>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <th class="table-light">{{current_user.user_data.ADDRESS}}</th>
+                </tr>
+
+                <tr>
+                    <th>Update</th>
+                    <th class="table-light">
+                        <li class="list-group-item"><a href="{{url_for('user.user_account_update')}}"><i
+                                    class="fas fa-edit"></i></a>
+                            </i>
+                    </th>
+                </tr>
+
+            </thead>
+        </table>
+    </div>
+
+
+</div>
+{% endblock body %}

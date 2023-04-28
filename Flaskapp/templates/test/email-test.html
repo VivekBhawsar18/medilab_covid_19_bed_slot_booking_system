@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email</title>
+    <style>
+        /* Add some basic styles for font and padding */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        /* Center the form on the page */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Style the form */
+        form {
+            background-color: #f2f2f2;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 400px;
+            text-align: center;
+        }
+
+        /* Style the form heading */
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Style the input field */
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Style for the hover effect on the submit button */
+        input[type="submit"]:hover {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Form container -->
+    <div class="form-container">
+        <!-- Form -->
+        <form action="/test/email" method="post">
+            <!-- Form heading -->
+            <h1>Enter Email </h1>
+            <!-- Email input field -->
+            <input type="email" placeholder="Enter your email" name="email">
+            <!-- Submit button -->
+            <input type="submit" value="Send mail">
+        </form>
+    </div>
+</body>
+
+</html>

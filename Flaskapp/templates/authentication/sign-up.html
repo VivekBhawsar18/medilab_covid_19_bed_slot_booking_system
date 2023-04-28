@@ -1,0 +1,61 @@
+{% extends 'authentication/base.html' %}
+{% block title %} User SignUp{% endblock title %}
+
+
+{% block body %}
+<br>
+<div class="containerI">
+    <br>
+    <section class="container1 forms">
+        <div class="form login">
+
+            <div class="form-content">
+                {% include 'alert/flash.html' %}
+                <header>sign-up</header>
+                <form action="/user/sign-up" method="post" id="sipfrm">
+
+                    <!-- <div class="field input-field">
+                        <input type="text" placeholder="Full Name" class="input" name="name" maxlength="50" required>
+                    </div> -->
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input" name="email" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Create password" class="password" name="password" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Confirm password" class="password" name="confirm-password"
+                            required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <!-- <div class="field input-field">
+                        <input type="tel" placeholder="Contact No." class="contact" name="contact" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="Gender" class="contact" name="gender" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="Address" class="contact" name="address" required>
+                    </div> -->
+
+                    <div class="field button-field">
+                        <button type="submit">Get OTP</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Already have an account? <a href="{{ url_for('authentication.user_sign_in') }}"
+                            class="link login-link">Login</a></span>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+{% endblock body %}

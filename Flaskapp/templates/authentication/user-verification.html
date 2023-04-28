@@ -1,0 +1,74 @@
+{% extends 'authentication/base.html' %}
+{% block title %} OTP Varification{% endblock title %}
+
+{% block body %}
+
+<div class="containerI">
+    <br>
+    <br>
+    <section class="container1 forms">
+        <div class="form login">
+
+            <div class="form-content">
+                {% include 'alert/flash.html' %}
+                <h3>OTP VERIFICATION</h3>
+                <form {% if session['auth_type']=='sign-in' %} action="/sign-in/verification" {% elif
+                    session['auth_type']=='sign-up' %} action="/sign-up/verification" {% endif %} action="/user/addUser"
+                    method="post">
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="Enter 6 digit OTP" class="input" name="otp" minlength="4"
+                            maxlength="6" required>
+                    </div>
+                    <!-- <div class="field input-field">
+                        <input type="text" placeholder="Enter Password" class="password" name="password" minlength="8"
+                            maxlength="20" required>
+                    </div> -->
+
+
+                    <div class="field button-field">
+                        <button type="submit">Verify OTP</button>
+                    </div>
+                </form>
+                <div class="field button-field">
+                    <a href="/One-Time Password">
+                        <button id="otp-button" type="submit" disabled>Resend OTP</button>
+                    </a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+</div>
+
+<script>
+    // Set the timer duration to 30 seconds
+    const timerDuration = 30;
+
+    // Get the "Resend OTP" button element
+    const otpButton = document.getElementById('otp-button');
+
+    // Set the initial button text
+    otpButton.innerText = `Resend OTP (${timerDuration}s)`;
+
+    // Disable the button initially
+    otpButton.disabled = true;
+
+    // Start the timer
+    let timeLeft = timerDuration;
+    const timer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft === 0) {
+            clearInterval(timer);
+            otpButton.disabled = false;
+            otpButton.innerText = 'Resend OTP';
+        } else {
+            otpButton.innerText = `Resend OTP (${timeLeft}s)`;
+        }
+    }, 1000);
+
+</script>
+
+{% endblock body %}

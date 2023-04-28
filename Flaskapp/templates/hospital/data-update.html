@@ -1,0 +1,72 @@
+{% extends 'hospital/base.html' %}
+
+{% block body %}
+<div class="hospital-container">
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container mt-4 ">
+        <div class=" mycontainer1 display-6 text-center  ">Update Hospital Data</div>
+        <br />
+        <div class="row">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    {% include "alert/flash.html" %}
+                    <br>
+                    <h4 class="text-center text-dark">Covid Care Center</h4>
+                    <div class="card-body bg-light">
+
+                        <form action="/hospital/update/{{hospital_data.ID}}" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control mt-2" name="hcode" value={{hospital_data.HCODE}}
+                                    placeholder="Enter the Hospital Code" required hidden />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control mt-2" name="hname"
+                                    value={{hospital_data.HOSPITAL_NAME}} placeholder="Enter Hospital Name" required />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-control mt-2" name="normalbed"
+                                    placeholder="Normal Bed Available?" value={{hospital_data.NORMAL_BEDS}} required />
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control mt-2" name="hicubeds"
+                                    value={{hospital_data.HIGH_CARE_UNIT_BEDS}} placeholder="H.I.C.U Bed Available?"
+                                    required />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-control mt-2" name="icubeds"
+                                    value={{hospital_data.ICU_BEDS}} placeholder="I.C.U Bed Available?" required />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" class="form-control mt-2" name="ventbeds"
+                                    value={{hospital_data.VENTILATOR_BEDS}} placeholder="Ventilators Bed Available?"
+                                    required />
+                            </div>
+
+                            <br />
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="submit">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-md-4"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock body %}

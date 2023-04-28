@@ -1,0 +1,38 @@
+{% extends 'admin/base.html' %}
+{% block title %} Add hospital {% endblock title %}
+{% block body %}
+<div class="containerI">
+    <br>
+    <br>
+    <section class="container1 forms">
+        <div class="form login">
+            <div class="form-content">
+                {% include "alert/flash.html" %}
+                <header>Add Hospital User</header>
+                <form action="/admin/add/hospital" method="post" id="sipfrm" href="">
+                    <div class="field input-field">
+                        <input type="text" placeholder="Enter Hospital Code" class="input" name="hcode" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Enter Email" class="input" name="email" required>
+                    </div>
+
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Enter Password" class="password" name="password" required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+
+                    <div class="field button-field">
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+</div>
+
+{% endblock body %}

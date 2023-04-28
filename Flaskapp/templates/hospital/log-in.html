@@ -1,0 +1,37 @@
+{% extends 'hospital/base.html' %}
+{% block title %} Hospital Login{% endblock title %}
+{% block logo %}
+<h1 class="logo me-auto"><a href="https://medilab.pythonanywhere.com">Medilab</a></h1>
+{% endblock logo %}
+
+
+{% block body %}
+<div class="containerI">
+    <br>
+    <section class="container1 forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Hospital Login</header>
+                <form action="/hospital/login" method="post" id="logFrm">
+                    {% include "alert/flash.html" %}
+                    <div class="field input-field">
+                        <input type="email" placeholder="Enter Email" class="input" name="email" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Enter Password" class="password" name="password"
+                            minlength="8" required>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+</div>
+
+{% endblock body %}

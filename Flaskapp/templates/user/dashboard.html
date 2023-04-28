@@ -1,0 +1,98 @@
+{% extends 'user/base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<!-- ======= Hero Section ======= -->
+{% include 'alert/flash.html' %}
+<section id="hero" class="d-flex align-items-center">
+    <div class="container">
+        <h1>Welcome {{current_user.name}}</h1>
+        <h2>INDIA COVID-19 BED SLOT BOOKING SYSTEM</h2>
+        <a href="#services" class="btn-get-started scrollto">Get Started</a>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Services</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
+                    Sit
+                    sint
+                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+                    Quia fugiat sit
+                    in iste officiis commodi quidem hic quas.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                        <h4><a href="{{url_for('user.bed_slot_booking')}}">Book Bed Slot</a></h4>
+                        <p>Easily schedule appointments and secure your place in line with the convenient online booking
+                            system in the Bookings
+                            section of the Medilab website.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-pills"></i></div>
+                        <h4><a href="{{ url_for('user.user_booking') }}">Booking</a></h4>
+                        <p>Stay informed and in control of your medical appointments with real-time updates and
+                            scheduling options in the
+                            user-friendly Bookings section on the Medilab website.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                        <h4><a href="{{ url_for('user.user_account') }}">Account</a></h4>
+                        <p>Access your personal medical information and manage your profile with ease in the
+                            user-friendly Account section of the
+                            Medilab website.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                                <div class="icon"><i class="fas fa-dna"></i></div>
+                                <h4><a href="">Nemo Enim</a></h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                                <div class="icon"><i class="fas fa-wheelchair"></i></div>
+                                <h4><a href="">Dele cardo</a></h4>
+                                <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                                <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                                <h4><a href="">Divera don</a></h4>
+                                <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                            </div>
+                        </div> -->
+
+            </div>
+
+
+        </div>
+    </section><!-- End Services Section -->
+    {% endblock body %}
