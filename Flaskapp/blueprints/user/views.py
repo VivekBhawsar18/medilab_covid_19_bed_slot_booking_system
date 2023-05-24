@@ -98,7 +98,7 @@ def user_account_update():
                 return redirect(url_for('user.user_account'))
 
             flash('Contact No. is already registered' , 'warning')
-            return render_template("user/services/update-Account.html")
+              return redirect(url_for('user.user_account_update'))
 
         return render_template("user/services/update-account.html")
     except Exception as e:
